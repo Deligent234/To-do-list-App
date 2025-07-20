@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ----------- Base Layout ----------- */
+body {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#addBtn {
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background-color: #5b0dff;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+#addBtn:hover {
+    background: #3f00b3;
+}
+
+#input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 70%;
+    margin-right: 10px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.banner {
+    background: linear-gradient(to bottom right, #4a00e0, #8e2de2);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.task {
+    background: linear-gradient(to bottom right, #ffffff, #e8e4eb);
+    color: #444;
+    padding: 30px;
+}
+
+.task-list li {
+    padding: 10px 15px;
+    background: #f0f0f0;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+.task-list li:hover {
+    background-color: #dcdcdc;
+}
+
+/* ----------- Responsive Breakpoints ----------- */
+@media (max-width: 1400px) {
+    .container {
+        padding: 10px;
+    }
+    #input {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1200px) {
+    #input {
+        width: 100%;
+    }
+    .input-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .banner,
+    .task {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    #addBtn,
+    #input {
+        width: 90%;
+    }
+    .task-list li {
+        font-size: 14px;
+    }
+}
